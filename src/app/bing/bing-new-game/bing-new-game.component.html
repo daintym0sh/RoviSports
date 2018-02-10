@@ -1,0 +1,64 @@
+<div fxLayout="column" fxLayoutGap="25px">
+
+  <div fxLayout="row" fxLayoutGap="20px">
+
+    <div fxLayout="column" fxFlex fxLayoutGap="35px">
+
+      <div fxLayout="column" fxLayoutAlign="center end">
+        <app-player-card 
+          [contentSize]= 'playerSize' 
+          [bag] = 'bagName' 
+          [containerName] = '"selectionOne"' 
+          [playerPosition] = '"Player 1"'
+          (playerSelection) = 'setSelectionOne($event)'>
+        </app-player-card>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="center end" >
+        <app-player-card 
+          [contentSize]= 'playerSize' 
+          [bag] = 'bagName' 
+          [containerName] = '"selectionTwo"' 
+          [playerPosition] = '"Player 2"'
+          (playerSelection) = 'setSelectionTwo($event)'>
+        </app-player-card>
+      </div>
+
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="300px" fxLayoutGap="35px">
+      <div></div>
+      <img src="assets/table.jpg"/>
+    </div>
+
+    <div fxLayout="column" fxFlex fxLayoutGap="35px">
+
+      <div fxLayout="column" fxLayoutAlign="center start" >
+        <app-player-card 
+          [contentSize]= 'playerSize' 
+          [bag] = 'bagName' 
+          [containerName] = '"selectionThree"' 
+          [playerPosition] = '"Player 3"'
+          (playerSelection) = 'setSelectionThree($event)'>
+        </app-player-card>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="center start" >
+        <app-player-card 
+          [contentSize]= 'playerSize' 
+          [bag] = 'bagName' 
+          [containerName] = '"selectionFour"' 
+          [playerPosition] = '"Player 4"'
+          (playerSelection) = 'setSelectionFour($event)'>
+        </app-player-card>
+      </div>
+    </div>
+
+  </div>
+
+  <div fxLayoutAlign="center center">
+    <app-player-selection [contentSize]= 'playerSize' [bag] = '"first-bag"'></app-player-selection>
+  </div>
+  
+
+</div>

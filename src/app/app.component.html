@@ -1,0 +1,14 @@
+<nav mat-tab-nav-bar>
+	<div fxLayout="row" fxLayoutAlign="center none" >
+		<div *ngFor="let routeLink of routeLinks; let i = index;" fxLayout="column" fxLayoutAlign="center none" fxFlex="grow" >
+			<a mat-tab-link
+			[routerLink]="routeLink.link"
+			routerLinkActive="mat-tab-link-active"
+			>
+			 {{routeLink.label}}
+			</a>
+		</div>
+	</div>
+</nav>
+
+<router-outlet></router-outlet>

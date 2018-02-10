@@ -1,0 +1,29 @@
+@import "~dragula/dist/dragula.css";
+
+.mat-card-subtitle{
+    font-size: 10pt;
+}
+
+#playerPositionBag{
+    /* background-color: rgba(239, 242, 251, 0.233); */
+    border-radius: 5px;
+    border: 1px solid rgb(230, 230, 230);
+    background-image:url("../../assets/drag.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 75%;
+}
+
+.card-header-image {
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    background-image: url("../../assets/check.png")
+}
+
+#playerPositionDisplay{
+    border-radius: 5px;
+    overflow: hidden;
+    height: 110px;
+    width: 100px;
+}

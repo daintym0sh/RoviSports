@@ -1,0 +1,20 @@
+@import "~dragula/dist/dragula.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#playerSelectionDisplay{
+    border-radius: 5px;
+    border: 1px solid rgb(112, 112, 112);
+    overflow: hidden;
+}
+
+#name {
+    font-family: 'Roboto';
+    font-size: 10pt;
+}
+
+#background {
+    border-radius: 5px;
+    border: 1px solid rgb(247, 247, 247);
+    height: 110;
+    width: 500px;
+}
