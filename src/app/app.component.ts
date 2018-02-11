@@ -28,5 +28,6 @@ export class AppComponent implements OnInit {
         // this.router.events.subscribe((res) => {
         //     this.activeLinkIndex = this.routeLinks.indexOf(this.routeLinks.find(tab => tab.link === '.' + this.router.url));
         // });
+        this.router.navigate(['/bing/new']);
       }
 }

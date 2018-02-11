@@ -10,8 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'bing', pathMatch: 'full'},
-  { path: 'bing', loadChildren: 'app/bing/bing.module#BingModule' },
+  { path: 'bing', loadChildren: 'app/bing/bing.module#BingModule'},
   { path: 'ping', loadChildren: 'app/ping/ping.module#PingModule' },
   { path: '**', component: NotFoundComponent}
 ];

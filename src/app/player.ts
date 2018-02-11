@@ -46,9 +46,10 @@ export class Player {
 	public get $ELOScoreScrappy(): number {
 		return this.ELOScoreScrappy;
 	}
-	
+
 	public getImageSrc(): string{
-		return 'https://rovisys.roving-office.com/user/photo/' + this.$PlayerID + '?size=500';
+    // return 'https://rovisys.roving-office.com/user/photo/' + this.$PlayerID + '?size=500';
+    return '../assets/' + + this.$PlayerID + '.jpg';
 	}
-  
+
 }
