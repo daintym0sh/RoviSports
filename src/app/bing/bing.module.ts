@@ -18,6 +18,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { DragulaModule } from 'ng2-dragula';
 import { MatSelectModule } from '@angular/material/select';
 
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+};
+
 @NgModule({
   declarations: [
     BingComponent,
@@ -35,8 +42,15 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatButtonModule,
     DragulaModule,
-    MatSelectModule
+    MatSelectModule,
+    PerfectScrollbarModule
   ],
-  providers: [PlayerService]
+  providers: [
+    PlayerService,
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ]
 })
 export class BingModule { }

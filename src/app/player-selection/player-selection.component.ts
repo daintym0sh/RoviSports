@@ -1,6 +1,7 @@
 import { Player } from '../player';
 import { Component, Input } from '@angular/core';
 import { PlayerService } from '../player.service';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({
   selector: 'app-player-selection',
@@ -15,6 +16,8 @@ export class PlayerSelectionComponent {
 
   public players: Player[];
 
+  public config: PerfectScrollbarConfigInterface = {};
+
   constructor(private playerService: PlayerService) {
     this.players = playerService.getPlayers();
   }
@@ -24,7 +27,7 @@ export class PlayerSelectionComponent {
   }
 
   public getContentBarWidth(): number{
-    return (+this.contentSize * 10) + 30;
+    return (+this.contentSize * this.players.length) + 100;
   }
 
   public getContentBarHeight(): number{
