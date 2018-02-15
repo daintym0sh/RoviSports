@@ -16,11 +16,16 @@ export class BingNewGameComponent implements OnDestroy {
   public selectionTwo = new Array<Player>();
   public selectionThree = new Array<Player>();
   public selectionFour = new Array<Player>();
+  public scoreSize = new Array<number>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+  public scoreTeamOne: number;
+  public scoreTeamTwo: number;
 
   constructor(private dragulaService: DragulaService) {
 
     this.playerSize = '100';
     this.bagName = 'first-bag';
+    this.scoreTeamOne = null;
+    this.scoreTeamTwo = null;
 
     this.dragulaService.setOptions(this.bagName, {
       revertOnSpill: true,

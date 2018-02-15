@@ -5,20 +5,20 @@
     <div fxLayout="column" fxFlex fxLayoutGap="35px">
 
       <div fxLayout="column" fxLayoutAlign="center end">
-        <app-player-card 
-          [contentSize]= 'playerSize' 
-          [bag] = 'bagName' 
-          [containerName] = '"selectionOne"' 
+        <app-player-card
+          [contentSize]= 'playerSize'
+          [bag] = 'bagName'
+          [containerName] = '"selectionOne"'
           [playerPosition] = '"Player 1"'
           (playerSelection) = 'setSelectionOne($event)'>
         </app-player-card>
       </div>
 
       <div fxLayout="column" fxLayoutAlign="center end" >
-        <app-player-card 
-          [contentSize]= 'playerSize' 
-          [bag] = 'bagName' 
-          [containerName] = '"selectionTwo"' 
+        <app-player-card
+          [contentSize]= 'playerSize'
+          [bag] = 'bagName'
+          [containerName] = '"selectionTwo"'
           [playerPosition] = '"Player 2"'
           (playerSelection) = 'setSelectionTwo($event)'>
         </app-player-card>
@@ -27,27 +27,40 @@
     </div>
 
     <div fxLayout="column" fxLayoutAlign="center center" fxFlex="300px" fxLayoutGap="35px">
-      <div></div>
-      <img src="assets/table.jpg"/>
+    <mat-form-field>
+      <mat-select placeholder="Team One Score" [(value)] = 'scoreTeamOne'>
+        <mat-option *ngFor="let scoreValue of scoreSize" [value]="scoreValue">
+        {{ scoreValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <img src="assets/table.jpg"/>
+    <mat-form-field>
+        <mat-select placeholder="Team Two Score" [(value)] = 'scoreTeamTwo'>
+          <mat-option *ngFor="let scoreValue of scoreSize" [value]="scoreValue">
+          {{ scoreValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
 
     <div fxLayout="column" fxFlex fxLayoutGap="35px">
 
       <div fxLayout="column" fxLayoutAlign="center start" >
-        <app-player-card 
-          [contentSize]= 'playerSize' 
-          [bag] = 'bagName' 
-          [containerName] = '"selectionThree"' 
+        <app-player-card
+          [contentSize]= 'playerSize'
+          [bag] = 'bagName'
+          [containerName] = '"selectionThree"'
           [playerPosition] = '"Player 3"'
           (playerSelection) = 'setSelectionThree($event)'>
         </app-player-card>
       </div>
 
       <div fxLayout="column" fxLayoutAlign="center start" >
-        <app-player-card 
-          [contentSize]= 'playerSize' 
-          [bag] = 'bagName' 
-          [containerName] = '"selectionFour"' 
+        <app-player-card
+          [contentSize]= 'playerSize'
+          [bag] = 'bagName'
+          [containerName] = '"selectionFour"'
           [playerPosition] = '"Player 4"'
           (playerSelection) = 'setSelectionFour($event)'>
         </app-player-card>
@@ -59,6 +72,6 @@
   <div fxLayoutAlign="center center">
     <app-player-selection [contentSize]= 'playerSize' [bag] = '"first-bag"'></app-player-selection>
   </div>
-  
+
 
 </div>

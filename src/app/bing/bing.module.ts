@@ -16,9 +16,10 @@ import { PlayerSelectionComponent } from '../player-selection/player-selection.c
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { DragulaModule } from 'ng2-dragula';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
-  declarations: [ 
+  declarations: [
     BingComponent,
     BingNewGameComponent,
     BingStatsComponent,
@@ -33,7 +34,8 @@ import { DragulaModule } from 'ng2-dragula';
     MatTableModule,
     MatCardModule,
     MatButtonModule,
-    DragulaModule
+    DragulaModule,
+    MatSelectModule
   ],
   providers: [PlayerService]
 })
