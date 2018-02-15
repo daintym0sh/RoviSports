@@ -34,7 +34,8 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <img src="assets/table.jpg"/>
+    <img src="assets/table.jpg" />
+    <button mat-raised-button [disabled]='userInputIncomplete()'>Submit</button>
     <mat-form-field>
         <mat-select placeholder="Team Two Score" [(value)] = 'scoreTeamTwo'>
           <mat-option *ngFor="let scoreValue of scoreSize" [value]="scoreValue">

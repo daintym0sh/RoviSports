@@ -15,12 +15,20 @@ export class PlayerSelectionComponent {
 
   public players: Player[];
 
-  constructor(private playerService: PlayerService) { 
+  constructor(private playerService: PlayerService) {
     this.players = playerService.getPlayers();
   }
 
   public getContentSize(): string{
     return this.contentSize + 'px';
+  }
+
+  public getContentBarWidth(): number{
+    return (+this.contentSize * 10) + 30;
+  }
+
+  public getContentBarHeight(): number{
+    return +this.contentSize + 15;
   }
 
 }

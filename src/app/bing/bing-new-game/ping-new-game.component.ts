@@ -48,6 +48,15 @@ export class BingNewGameComponent implements OnDestroy {
     });
   }
 
+  public userInputIncomplete(): boolean{
+    return  !(this.selectionOne.length > 0 &&
+            this.selectionTwo.length > 0 &&
+            this.selectionThree.length > 0 &&
+            this.selectionFour.length > 0 &&
+            this.scoreTeamOne != null &&
+            this.scoreTeamTwo != null);
+  }
+
   ngOnDestroy(): void {
     this.dragulaService.destroy(this.bagName);
   }

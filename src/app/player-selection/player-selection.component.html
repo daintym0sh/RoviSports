@@ -1,12 +1,11 @@
-<div id="background" fxLayout="row" class='container' [dragula]='bag' [dragulaModel]='players' fxLayoutGap="3px">
+<div id="background" fxLayout="row" class='container' [dragula]='bag' [dragulaModel]='players' fxLayoutGap="3px" [ngStyle]="{'width.px': getContentBarWidth(), 'height.px': getContentBarHeight()}">
 
-  <div  id="playerSelectionDisplay" 
-        fxLayout="column" 
-        fxLayoutAlign="center center" 
+  <div  id="playerSelectionDisplay"
+        fxLayout="column"
+        fxLayoutAlign="center center"
         [fxFlex]='getContentSize()'
          *ngFor='let player of players'>
     <img src={{player.getImageSrc()}}/>
     <div id="name">{{player.$LastName}}</div>
-    
   </div>
 </div>

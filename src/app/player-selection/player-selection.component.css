@@ -15,6 +15,5 @@
 #background {
     border-radius: 5px;
     border: 1px solid rgb(247, 247, 247);
-    height: 110;
-    width: 500px;
+    overflow: hidden;
 }
