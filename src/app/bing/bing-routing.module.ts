@@ -6,15 +6,15 @@ import { BingNewGameComponent } from './bing-new-game/ping-new-game.component';
 
 const routes = [
   {
-    path: '', 
+    path: '',
     component: BingComponent,
     children: [
-      { path: 'new', component: BingNewGameComponent}, 
+      { path: 'new', component: BingNewGameComponent},
       { path: 'stats', component: BingStatsComponent}
     ]
   }
 ];
-  
+
   @NgModule({
     imports: [ RouterModule.forChild(routes) ],
     exports: [ RouterModule ]

@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   { path: 'bing', loadChildren: 'app/bing/bing.module#BingModule'},
   { path: 'ping', loadChildren: 'app/ping/ping.module#PingModule' },
+  { path: '',   redirectTo: '/bing', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent}
 ];
 
