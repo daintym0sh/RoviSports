@@ -1,18 +1,17 @@
+.mat-tab-link-active,
+.mat-tab-label-active {
+    background-color: rgb(229, 233, 248);
+    border: 1px solid rgb(215, 226, 247);
+    color: black;
+}
 
-  .mat-tab-link-active,
-  .mat-tab-label-active {
-      background-color: rgb(229, 233, 248);
-      border: 1px solid rgb(215, 226, 247);
-      color: black;
-  }
+.mat-tab-link,
+.mat-tab-label {
+    color: black;
+    line-height: 30px;
+    height: 60px;
+}
 
-  .mat-tab-link,
-  .mat-tab-label {
-      color: black;
-      line-height: 30px;
-      height: 60px;
-  }
-
-  .tabContentContainer {
-      border: 1px solid #aaaaaa;
-  }
+.tabContentContainer {
+    border: 1px solid #aaaaaa;
+}

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BingStatsComponent } from './bing-stats/bing-stats.component';
 import { BingComponent } from './bing.component';
-import { BingNewGameComponent } from './bing-new-game/ping-new-game.component';
+import { BingNewGameComponent } from './bing-new-game/bing-new-game.component';
 
 const routes = [
   {
