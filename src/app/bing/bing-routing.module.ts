@@ -5,12 +5,14 @@ import { BingComponent } from './bing.component';
 import { BingNewGameComponent } from './bing-new-game/bing-new-game.component';
 
 const routes = [
+  { path: '', redirectTo: 'bing/new', pathMatch: 'full' },
+  { path: 'bing', redirectTo: 'bing/new', pathMatch: 'full' },
   {
-    path: '',
+    path: 'bing',
     component: BingComponent,
     children: [
-      { path: 'new', component: BingNewGameComponent},
-      { path: 'stats', component: BingStatsComponent}
+      { path: 'new', component: BingNewGameComponent },
+      { path: 'stats', component: BingStatsComponent }
     ]
   }
 ];
