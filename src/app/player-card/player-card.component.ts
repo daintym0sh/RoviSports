@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Player } from '../player';
-import { DragulaService } from 'ng2-dragula/components/dragula.provider';
+import { DragulaService } from 'ng2-dragula';
 
 @Component({
   selector: 'app-player-card',
@@ -25,20 +25,14 @@ export class PlayerCardComponent {
 
     this.selectedPlayers = new Array<Player>();
 
-    dragulaService.dropModel.subscribe((value) => {
+    dragulaService.drop().subscribe((param) => {
+      let t = param.target as HTMLElement;
       this.playerSelection.emit(this.selectedPlayers);
-      this.onDropModel(value.slice(1));
     });
-
   }
 
   public getContentSize(): string{
     return this.contentSize + 'px';
-  }
-
-  private onDropModel(args) {
-    let [el, target, source] = args;
-    this.playerSelection.emit(this.selectedPlayers);
   }
 
 }

@@ -15,7 +15,7 @@ import { PlayerCardComponent } from '../player-card/player-card.component';
 import { PlayerSelectionComponent } from '../player-selection/player-selection.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { DragulaModule } from 'ng2-dragula';
+import { DragulaModule, DragulaService } from 'ng2-dragula';
 import { MatSelectModule } from '@angular/material/select';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -41,11 +41,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatTableModule,
     MatCardModule,
     MatButtonModule,
-    DragulaModule,
+    DragulaModule.forRoot(),
     MatSelectModule,
     PerfectScrollbarModule
   ],
   providers: [
+    DragulaService,
     PlayerService,
     {
       provide: PERFECT_SCROLLBAR_CONFIG,

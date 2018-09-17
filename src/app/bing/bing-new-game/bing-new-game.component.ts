@@ -12,6 +12,7 @@ export class BingNewGameComponent implements OnDestroy {
 
   public playerSize: string;
   public bagName: string;
+  // TODO: stored players are only being added to these arrays, not subtracted
   public selectionOne = new Array<Player>();
   public selectionTwo = new Array<Player>();
   public selectionThree = new Array<Player>();
@@ -27,18 +28,19 @@ export class BingNewGameComponent implements OnDestroy {
     this.scoreTeamOne = null;
     this.scoreTeamTwo = null;
 
-    this.dragulaService.setOptions(this.bagName, {
+    this.dragulaService.createGroup(this.bagName, {
       revertOnSpill: true,
       accepts: (el, target, source, sibling) => {
-        if (target.title === 'selectionOne' && this.selectionOne.length > 0){
+        let t = target as HTMLElement;
+        if (t.title === 'selectionOne' && this.selectionOne.length > 0){
           return false;
-        } else if (target.title === 'selectionTwo' && this.selectionTwo.length > 0){
-          return false;
-        }
-        else if (target.title === 'selectionThree' && this.selectionThree.length > 0){
+        } else if (t.title === 'selectionTwo' && this.selectionTwo.length > 0){
           return false;
         }
-        else if (target.title === 'selectionFour' && this.selectionFour.length > 0){
+        else if (t.title === 'selectionThree' && this.selectionThree.length > 0){
+          return false;
+        }
+        else if (t.title === 'selectionFour' && this.selectionFour.length > 0){
           return false;
         }
         else{

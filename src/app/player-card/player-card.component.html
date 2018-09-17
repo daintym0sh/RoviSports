@@ -6,8 +6,8 @@
     <mat-card-subtitle *ngIf="selectedPlayers.length < 1" style="font-size: 10pt;">(Empty)</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content [ngStyle]="{'height.px': contentSize, 'width.px': contentSize}">
-    
-    <div id="playerPositionBag" title={{containerName}} class="container" [dragula]='bag' [dragulaModel]='selectedPlayers' fxFlex fxLayoutGap="3px">
+
+    <div id="playerPositionBag" [attr.title]='containerName' class="container" [dragula]='bag' [(dragulaModel)]='selectedPlayers' fxFlex fxLayoutGap="3px">
       <div id="playerPositionDisplay" *ngFor='let player of selectedPlayers' fxLayoutAlign="center center" [fxFlex]='getContentSize()' fxFill>
         <img src={{player.getImageSrc()}}/>
       </div>

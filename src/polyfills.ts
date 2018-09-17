@@ -64,3 +64,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+ // For Dragula:
+ // This is a temporary workaround for Issue #849, while upstream dragula still relies on global.
+ (window as any).global = window;

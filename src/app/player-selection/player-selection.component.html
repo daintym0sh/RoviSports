@@ -1,6 +1,6 @@
 <perfect-scrollbar style="max-width: 618px; max-height: 400px;"  [config]="config">
 
-<div id="background" fxLayout="row" class='container' [dragula]='bag' [dragulaModel]='players' fxLayoutGap="3px" [ngStyle]="{'width.px': getContentBarWidth(), 'height.px': getContentBarHeight()}">
+<div id="background" fxLayout="row" class='container' [dragula]='bag' [(dragulaModel)]='players' fxLayoutGap="3px" [ngStyle]="{'width.px': getContentBarWidth(), 'height.px': getContentBarHeight()}">
 
   <div  id="playerSelectionDisplay"
         fxLayout="column"

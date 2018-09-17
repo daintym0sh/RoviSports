@@ -4,14 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { BingModule } from './bing/bing.module';
 import { PingModule } from './ping/ping.module';
 
-import { DragulaModule } from 'ng2-dragula/ng2-dragula';
+import { DragulaModule } from 'ng2-dragula';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  { path: 'bing', loadChildren: 'app/bing/bing.module#BingModule'},
-  { path: 'ping', loadChildren: 'app/ping/ping.module#PingModule' },
+  { path: 'bing', loadChildren: () => BingModule },
+  { path: 'ping', loadChildren: () => PingModule },
   { path: '',   redirectTo: '/bing', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent}
 ];
@@ -21,7 +21,7 @@ const routes: Routes = [
     BingModule,
     PingModule,
     RouterModule.forRoot(routes),
-    DragulaModule,
+    DragulaModule.forRoot(),
     MatCardModule,
     FlexLayoutModule
   ],
