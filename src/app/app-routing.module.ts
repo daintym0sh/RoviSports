@@ -20,7 +20,7 @@ const routes: Routes = [
   imports: [
     BingModule,
     PingModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { enableTracing: true } ),
     DragulaModule.forRoot(),
     MatCardModule,
     FlexLayoutModule

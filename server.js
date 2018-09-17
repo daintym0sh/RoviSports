@@ -8,8 +8,8 @@ const path = require('path');
 app.use(express.static('./dist/bing-bong'));
 
 // Path location strategy
-app.get('/*', function(req, res) {
-  res.sendFile(path.join('./dist/bing-bong/index.html'));
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, '/dist/bing-bong/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
