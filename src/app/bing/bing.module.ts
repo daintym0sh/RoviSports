@@ -5,22 +5,13 @@ import { PlayerService } from '../player.service';
 import { BingComponent } from './bing.component';
 import { BingRoutingModule} from './bing-routing.module';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTableModule } from '@angular/material/table';
-
 import { BingNewGameComponent } from './bing-new-game/bing-new-game.component';
 import { BingStatsComponent } from './bing-stats/bing-stats.component';
-import { PlayerCardComponent } from '../player-card/player-card.component';
-import { PlayerSelectionComponent } from '../player-selection/player-selection.component';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { DragulaModule, DragulaService } from 'ng2-dragula';
-import { MatSelectModule } from '@angular/material/select';
+import { DragulaService, DragulaModule } from 'ng2-dragula';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { GamesSharedModule } from '../shared/games-shared/games-shared.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 };
@@ -29,21 +20,13 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [
     BingComponent,
     BingNewGameComponent,
-    BingStatsComponent,
-    PlayerCardComponent,
-    PlayerSelectionComponent
+    BingStatsComponent
   ],
   imports: [
     CommonModule,
     BingRoutingModule,
-    FlexLayoutModule,
-    MatToolbarModule,
-    MatTableModule,
-    MatCardModule,
-    MatButtonModule,
-    DragulaModule.forRoot(),
-    MatSelectModule,
-    PerfectScrollbarModule
+    GamesSharedModule,
+    DragulaModule
   ],
   providers: [
     DragulaService,

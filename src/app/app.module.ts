@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTabsModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    MatTabsModule,
+    FlexLayoutModule,
+    DragulaModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })

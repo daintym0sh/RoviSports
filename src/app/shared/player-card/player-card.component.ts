@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Player } from '../player';
+import { Player } from '../../player';
 import { DragulaService } from 'ng2-dragula';
 
 @Component({

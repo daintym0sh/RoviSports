@@ -1,6 +1,6 @@
-import { Player } from '../player';
+import { Player } from '../../player';
 import { Component, Input } from '@angular/core';
-import { PlayerService } from '../player.service';
+import { PlayerService } from '../../player.service';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({

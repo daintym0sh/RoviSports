@@ -1,0 +1,67 @@
+<div fxLayout="column" fxLayoutGap="25px">
+
+  <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-around center" >
+
+    <div fxLayout="row">
+
+      <div fxLayout="column" fxLayoutAlign="start">
+
+        <div fxLayoutAlign="space-around center">
+          <app-player-card
+            [contentSize]= 'playerSize'
+            [bag] = 'bagName'
+            [containerName] = '"selectionOne"'
+            [playerPosition] = '"Player 1"'
+            (playerSelection) = 'setSelectionOne($event)'>
+          </app-player-card>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <mat-select placeholder="Team One Score" [(value)] = 'scoreTeamOne'>
+              <mat-option *ngFor="let scoreValue of scoreSize" [value]="scoreValue">
+              {{ scoreValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlex="450px" fxLayoutGap="35px">
+        <img src="assets/ping-table.png" />
+        <button mat-raised-button [disabled]='userInputIncomplete()'>Submit</button>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="end">
+
+        <div fxLayoutAlign="space-around center">
+          <app-player-card
+            [contentSize]= 'playerSize'
+            [bag] = 'bagName'
+            [containerName] = '"selectionTwo"'
+            [playerPosition] = '"Player 2"'
+            (playerSelection) = 'setSelectionTwo($event)'>
+          </app-player-card>
+        </div>
+
+        <mat-form-field>
+            <mat-select placeholder="Team Two Score" [(value)] = 'scoreTeamTwo'>
+              <mat-option *ngFor="let scoreValue of scoreSize" [value]="scoreValue">
+              {{ scoreValue }}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div fxLayoutAlign="center center">
+    <app-player-selection [contentSize]= 'playerSize' [bag] = 'bagName'></app-player-selection>
+  </div>
+
+
+</div>

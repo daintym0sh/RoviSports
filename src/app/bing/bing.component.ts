@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'bing-main',
@@ -8,6 +7,6 @@ import { Router } from '@angular/router';
 })
 export class BingComponent {
 
-  constructor(private router: Router) {
+  constructor() {
   }
 }
